@@ -31,6 +31,14 @@ Run `twilio flex:plugins --help` to see all the commands we currently support. F
 
 # About Plugin
 The goal of this plugin is to display a light them during the day and a dark theme at night. In adition to toggling dark/light theme the plugin makes use of the weatherapi. 
+## Specific Version
+In this version I used twilio assets to pull down a config file to drive the configuration. To test, load the plugin expected result will be the plugin appears blank and not working. Hit refresh and the plugin is back into a working state. This is just an experiment, and obviously due to this issue is not a viable path. However, it does illustrate how Flex is being cached, or at least propose a question to why does this work on the second refresh. 
+
+If you close the json file at: ('https://configdata-6860.twil.io/config.json')
+Place it on your services. Change the title value. Notice that will not update until you close the window and relaunch the plugin. 
+Update line 113 on ./src/interfacePlugin
+Working version of the plugin is at: https://github.com/vincentclark/flex-flow in the folder "plugin-interface" 
+
 
 ## Notes
 rename "sample_config.json" to "config.json
